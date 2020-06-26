@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+       
+    <style>
+   
+   .container{
+text-align: center;
+   }
+   img{
+       height: 150px;
+       width: 300px;
+       border-bottom: 2px solid black;
+   }
+
+   button{
+    float: right;
+    height: 40px;
+    border-bottom: 2px solid #eee;
+    background-color: rgb(100, 0, 38);
+    border-radius: 2px;
+    color: white;
+    float: left;
+    outline: none;
+
+}
+button:hover
+{   
+    background-color: rgb(128, 0, 60);
+    transition: ease 0.2s;
+}
+a{
+    color: aliceblue;
+}
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+      
+        <h1><i>Products Details</i></h1>
+        <hr>
+        <img src=" {{url_for('static', filename = name['images'])}} " alt="temp">
+        <h2> <strong>Product Name :</strong> {{name['name']}}</h2>
+        <h4> <strong>Price = RS:</strong> {{name['price']}}</h4>
+        <span> <strong> Description :</strong> </span>
+        <p>{{name['details']}}</p>
+     </div>
+
+     <button style="float: right;" type="submit"> <a style="text-decoration: none;"  href="/">return to index</a></button>
+         
+</body>
+</html>
